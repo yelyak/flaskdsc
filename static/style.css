@@ -1,0 +1,50 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #007BFF; /* Blue color for the title */
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #007BFF; /* Blue background for headers */
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #e6f7ff; /* Light blue for even rows */
+}
+
+tr:hover {
+    background-color: #b3e0ff; /* Slightly darker blue when hovering */
+}
+
+table td a {
+    text-decoration: none;
+    color: #0056b3; /* Darker blue for links */
+}
+
+table td a:hover {
+    text-decoration: underline;
+    color: #003366; /* Even darker blue when hovering on links */
+}
