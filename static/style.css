@@ -1,50 +1,123 @@
 /* style.css */
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff; /* Light blue background */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #F5E2C8; /* Champagne as background */
     margin: 0;
-    padding: 0;
+    padding: 20px;
+    line-height: 1.6;
+    color: #1a202c;
 }
 
 h1 {
     text-align: center;
-    margin-top: 20px;
-    color: #007BFF; /* Blue color for the title */
+    margin: 30px 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #18206F; /* Midnight Blue for title */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#filterInput {
+    display: block;
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: 1px solid #D88373; /* Coral Pink for border */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#filterInput:focus {
+    outline: none;
+    border-color: #D88373; /* Coral Pink for focus */
+    box-shadow: 0 0 8px rgba(216, 131, 115, 0.3);
 }
 
 table {
     width: 80%;
+    max-width: 1200px;
     margin: 20px auto;
-    border-collapse: collapse;
-    background-color: #fff;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 th, td {
-    padding: 10px;
+    padding: 14px 20px;
     text-align: left;
-    border: 1px solid #ddd;
+    border-bottom: 1px solid #D88373; /* Coral Pink for borders */
 }
 
 th {
-    background-color: #007BFF; /* Blue background for headers */
-    color: white;
+    background: #18206F; /* Midnight Blue for headers */
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+}
+
+tr {
+    transition: background-color 0.3s ease;
 }
 
 tr:nth-child(even) {
-    background-color: #e6f7ff; /* Light blue for even rows */
+    background-color: #F5E2C8; /* Champagne for even rows */
 }
 
 tr:hover {
-    background-color: #b3e0ff; /* Slightly darker blue when hovering */
+    background-color: #D88373; /* Penn Blue for hover */
 }
 
-table td a {
+td:nth-child(3) { /* Description column (3rd column, 0-based index) */
+    width: 40%; /* Wider description column */
+    max-width: 500px; /* Prevent it from becoming too wide */
+}
+
+td a {
+    color: #D88373; /* Coral Pink for links */
     text-decoration: none;
-    color: #0056b3; /* Darker blue for links */
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-table td a:hover {
+td a:hover {
+    color: #BD1E1E; /* Cornell Red for link hover */
     text-decoration: underline;
-    color: #003366; /* Even darker blue when hovering on links */
+}
+
+tr .description{
+    width: 70%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    table {
+        width: 95%;
+    }
+
+    #filterInput {
+        width: 95%;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    td:nth-child(3) {
+        width: 35%; /* Adjusted width for mobile */
+        max-width: 300px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
 }
